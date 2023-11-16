@@ -1,22 +1,14 @@
-[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/big-data-europe/Lobby)
+# hdfs-da-unicam
+ A simple docker-based Hadoop hdfs runtime environment with YARN.
 
-# docker-hbase
+ The origina project can be found here:
 
-# Standalone
-To run standalone hbase:
+ https://github.com/big-data-europe/docker-hbase
+
+## Requirements
+A woriking Docker and Docker compose environment, amd64 only (not work on MAC Mx).
+
+## Execution
 ```
-docker-compose -f docker-compose-standalone.yml up -d
+docker-compose up
 ```
-The deployment is the same as in [quickstart HBase documentation](https://hbase.apache.org/book.html#quickstart).
-Can be used for testing/development, connected to Hadoop cluster.
-
-# Local distributed
-To run local distributed hbase:
-```
-docker-compose -f docker-compose-distributed-local.yml up -d
-```
-
-This deployment will start Zookeeper, HMaster and HRegionserver in separate containers.
-
-# Distributed
-To run distributed hbase on docker swarm see this [doc](./distributed/README.md):
