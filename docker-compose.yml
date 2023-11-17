@@ -24,6 +24,8 @@ services:
       SERVICE_PRECONDITION: "namenode:50070"
     env_file:
       - ./hadoop.env
+    ports:
+      - 50075:50075
 
   datanode2:
     image: bde2020/hadoop-datanode:2.0.0-hadoop2.7.4-java8
@@ -34,6 +36,8 @@ services:
       SERVICE_PRECONDITION: "namenode:50070"
     env_file:
       - ./hadoop.env
+    ports:
+      - 50076:50075
 
   datanode3:
     image: bde2020/hadoop-datanode:2.0.0-hadoop2.7.4-java8
@@ -44,6 +48,8 @@ services:
       SERVICE_PRECONDITION: "namenode:50070"
     env_file:
       - ./hadoop.env
+    ports:
+      - 50077:50075
 
   resourcemanager:
     image: bde2020/hadoop-resourcemanager:2.0.0-hadoop2.7.4-java8
